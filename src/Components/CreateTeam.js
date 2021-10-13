@@ -10,6 +10,7 @@ export default function CreateTeam() {
                 <label>Team Color:
                 <input type="text" name="Team Color"></input>
                 </label>
+                <button>Create Team</button>
             </form>
         </div>
     )
