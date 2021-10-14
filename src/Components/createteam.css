@@ -1,0 +1,8 @@
+.createTeamForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.createTeamButton {
+  width: 250px;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './createteam.css'
 
 export default function CreateTeam() {
   const handleSubmit = e => {
@@ -8,7 +9,7 @@ export default function CreateTeam() {
   }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="createTeamForm" onSubmit={handleSubmit}>
         <label>
           Team Name:
           <input type="text" name="Team Name" />
@@ -17,7 +18,7 @@ export default function CreateTeam() {
           Team Color:
           <input type="text" name="Team Color"></input>
         </label>
-        <button>Create Team</button>
+        <button className="createTeamButton">Create Team</button>
       </form>
     </div>
   )
