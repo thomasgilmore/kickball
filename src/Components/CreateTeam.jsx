@@ -10,11 +10,11 @@ export default function CreateTeam() {
   return (
     <div>
       <form className="createTeamForm" onSubmit={handleSubmit}>
-        <label>
+        <label htmlFor="teamName">
           Team Name:
           <input type="text" name="Team Name" />
         </label>
-        <label>
+        <label htmlFor="teamColor">
           Team Color:
           <input type="text" name="Team Color" />
         </label>
