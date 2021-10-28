@@ -1,7 +1,7 @@
 import React from 'react';
 import './createteam.css';
 
-export default function CreateTeam() {
+export default function PlayerInput() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(e.target[0].value);
