@@ -21,13 +21,14 @@ export default function PlayerInput2() {
       <form className="playerInputForm" onSubmit={handleSubmit}>
         <label htmlFor="playerName" className="nameLabel">
           Name:
-          <input type="text" name="Player Name" className="playerNameInput" />
+          <input type="text" name="Player Name" className="playerNameInput" required="yes" />
         </label>
         <h1>
           Going to Game:
         </h1>
-        <button type="button" className="playerSubmitButton" onClick={handleYesClick}>Yes</button>
-        <button type="button" className="playerSubmitButton" onClick={handleNoClick}>No</button>
+        <input type="button" className="playerSubmitButton" value="Yes" onClick={handleYesClick} />
+        <input type="button" className="playerSubmitButton" value="No" onClick={handleNoClick} />
+        <button type="button" className="playerSubmitButton">Submit</button>
       </form>
     </div>
   );
