@@ -21,7 +21,6 @@ export default function PlayerInput() {
           <input type="checkbox" id="yes" name="yes" value="yes" />
           Yes
         </label>
-        <input type="checkbox" id="no" name="no" value="No" />
         <label htmlFor="no">
           <input type="checkbox" id="no" name="no" value="No" />
           No
