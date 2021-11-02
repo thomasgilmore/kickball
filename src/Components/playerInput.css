@@ -11,6 +11,25 @@
   flex-direction: column;
 }
 
+.nameLabel {
+  text-align: center;
+  font-size: 18px;
+}
+
+.playerNameInput {
+  margin-left: 5px;
+  font-size: 18px;
+  height: 20px;
+}
+
+h1 {
+  margin: 10px 0;
+  text-align: center;
+}
+
 .playerSubmitButton {
   width: 250px;
+  height: 40px;
+  font-size: 20px;
+  margin: 5px 0;
 }

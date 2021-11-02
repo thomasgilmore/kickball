@@ -19,9 +19,9 @@ export default function PlayerInput2() {
   return (
     <div className="divPlayerInputForm">
       <form className="playerInputForm" onSubmit={handleSubmit}>
-        <label htmlFor="playerName">
+        <label htmlFor="playerName" className="nameLabel">
           Name:
-          <input type="text" name="Player Name" />
+          <input type="text" name="Player Name" className="playerNameInput" />
         </label>
         <h1>
           Going to Game:
