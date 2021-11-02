@@ -1,3 +1,11 @@
+.divPlayerInputForm {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .playerInputForm {
   display: flex;
   flex-direction: column;

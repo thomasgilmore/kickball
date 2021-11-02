@@ -17,7 +17,7 @@ export default function PlayerInput2() {
   };
 
   return (
-    <div>
+    <div className="divPlayerInputForm">
       <form className="playerInputForm" onSubmit={handleSubmit}>
         <label htmlFor="playerName">
           Name:
