@@ -1,0 +1,8 @@
+.playerInputForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerSubmitButton {
+  width: 250px;
+}
