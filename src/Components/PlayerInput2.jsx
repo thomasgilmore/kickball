@@ -1,5 +1,5 @@
 import React from 'react';
-import './createteam.css';
+import './playerInput.css';
 
 export default function PlayerInput2() {
   const handleSubmit = (e) => {
@@ -18,7 +18,7 @@ export default function PlayerInput2() {
 
   return (
     <div>
-      <form className="createTeamForm" onSubmit={handleSubmit}>
+      <form className="playerInputForm" onSubmit={handleSubmit}>
         <label htmlFor="playerName">
           Name:
           <input type="text" name="Player Name" />
@@ -26,8 +26,8 @@ export default function PlayerInput2() {
         <h1>
           Going to Game:
         </h1>
-        <button type="button" className="createTeamButton" onClick={handleYesClick}>Yes</button>
-        <button type="button" className="createTeamButton" onClick={handleNoClick}>No</button>
+        <button type="button" className="playerSubmitButton" onClick={handleYesClick}>Yes</button>
+        <button type="button" className="playerSubmitButton" onClick={handleNoClick}>No</button>
       </form>
     </div>
   );
