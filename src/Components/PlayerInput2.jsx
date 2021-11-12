@@ -52,7 +52,7 @@ export default function PlayerInput2() {
         <input type="button" className="playerChoiceButtons No" disabled={buttonDisabled} style={{ opacity: noButton }} value="No" onClick={handleNoClick} />
         <button type="button" className="playerSubmitButton" onClick={handleSubmit}>Submit</button>
       </form>
-      {viewMessage === 'Yes' ? <h3>{messageAfterSubmit}</h3> : <div />}
+      {viewMessage === 'Yes' ? <h2 className="messageAfterSubmit">{messageAfterSubmit}</h2> : <div />}
     </div>
   );
 }

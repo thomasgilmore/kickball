@@ -63,3 +63,10 @@ h1 {
   margin: 5px 0;
   background-color: lightskyblue;
 }
+
+.messageAfterSubmit {
+  border: lightgray 3px solid;
+  background-color: white;
+  padding: 30px;
+  position: absolute;
+}
