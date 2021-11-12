@@ -35,7 +35,28 @@ h1 {
   margin: 5px 0;
 }
 
+.Yes {
+  background-color: lightgreen;
+  border: lime 3px solid;
+}
+
+.Yes:hover {
+  background-color: lime;
+  border: lightgreen 3px solid;
+}
+
+.No {
+  background-color: lightpink;
+  border: red 3px solid;
+}
+
+.No:hover {
+  background-color: red;
+  border: lightpink 3px solid;
+}
+
 .playerSubmitButton {
+  border: blue 3px solid;
   width: 250px;
   height: 40px;
   font-size: 20px;

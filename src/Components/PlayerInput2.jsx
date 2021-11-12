@@ -27,7 +27,7 @@ export default function PlayerInput2() {
     setYesButton('100%');
     setNoButton('50%');
     setWhichButtonSelected('Yes');
-    setMessageAfterSubmit('Well see you at the game!');
+    setMessageAfterSubmit("We'll see you at the game!");
   };
 
   const handleNoClick = (e) => {
@@ -35,7 +35,7 @@ export default function PlayerInput2() {
     setYesButton('50%');
     setNoButton('100%');
     setWhichButtonSelected('No');
-    setMessageAfterSubmit("Sorry, we'll miss you at the game");
+    setMessageAfterSubmit("We'll miss you!");
   };
 
   return (
