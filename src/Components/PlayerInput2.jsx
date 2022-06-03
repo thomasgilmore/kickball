@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './playerInput.css';
+import { store } from '../Store/store';
 
 export default function PlayerInput2() {
+  const state = store.getState();
   const [yesButton, setYesButton] = useState('100%');
   const [noButton, setNoButton] = useState('100%');
   const [whichButtonSelected, setWhichButtonSelected] = useState('None');
@@ -38,6 +40,7 @@ export default function PlayerInput2() {
     setMessageAfterSubmit("We'll miss you!");
   };
 
+  console.log(state);
   return (
     <div className="divPlayerInputForm">
       <form className="playerInputForm" onSubmit={handleSubmit}>
