@@ -9,7 +9,7 @@ export default function PlayerInput3() {
   };
 
   return (
-    <div className='flex'>
+    <div className='flex my-20'>
       <form className="mx-auto">
         <div className='flex no-wrap'>
           <label className='mt-7 text-xl'>
