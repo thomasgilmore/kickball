@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ToggleButton, ToggleButtonGroup, Input, Typography } from '@mui/material';
+import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
 
 export default function PlayerInput3() {
   const [alignment, setAlignment] = React.useState('');
@@ -11,17 +11,20 @@ export default function PlayerInput3() {
   return (
     <div className='flex my-20'>
       <form className="mx-auto">
-        <div className='flex no-wrap'>
-          <label className='mt-7 text-xl'>
-            Name:
-          </label>
-          <Input name="Player Name" className='my-6' fullWidth={true} required />
-        </div>
+        <TextField
+          required
+          id="standard-required"
+          label="Name"
+          fullWidth={true}
+          variant="standard"
+          error={false}
+          margin="normal"
+        />
         <Typography variant='h4' align='center'>
           Going to the Game?
         </Typography>
         <ToggleButtonGroup 
-          className='my-6' 
+          className='my-3' 
           value={alignment}
           exclusive
           fullWidth={true}
