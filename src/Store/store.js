@@ -1,7 +1,9 @@
 import { createStore } from 'redux';
 
 const initialState = {
-  amount: '12.00',
+  inputValue: '',
+  errorForInput: false,
+  alignment: '',
 };
 
 function reducer(state = initialState) {
