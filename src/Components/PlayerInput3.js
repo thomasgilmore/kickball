@@ -15,7 +15,7 @@ export default function PlayerInput3() {
           <label className='mt-7 text-xl'>
             Name:
           </label>
-          <Input name="Player Name" className='my-6' fullWidth={true} />
+          <Input name="Player Name" className='my-6' fullWidth={true} required />
         </div>
         <Typography variant='h4' align='center'>
           Going to the Game?
