@@ -2,7 +2,12 @@ import React from 'react';
 import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
 
 export default function PlayerInput3() {
+  const [inputValue, setInputValue] = React.useState('');
   const [alignment, setAlignment] = React.useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  }
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -19,6 +24,7 @@ export default function PlayerInput3() {
           variant="standard"
           error={false}
           margin="normal"
+          onChange={handleInputChange}
         />
         <Typography variant='h4' align='center'>
           Going to the Game?
