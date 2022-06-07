@@ -3,6 +3,7 @@ import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '
 
 export default function PlayerInput3() {
   const [inputValue, setInputValue] = React.useState('');
+  const [errorForInput, setErrorForInput] = React.useState(false);
   const [alignment, setAlignment] = React.useState('');
 
   const handleInputChange = (event) => {
@@ -13,6 +14,18 @@ export default function PlayerInput3() {
     setAlignment(newAlignment);
   };
 
+  const handleSubmit = (event) => {
+    if (inputValue === '') {
+      setErrorForInput(true);
+    } else {
+      setErrorForInput(false);
+    }
+
+    if (alignment !== '') {
+      
+    }
+  }
+
   return (
     <div className='flex my-20'>
       <form className="mx-auto">
@@ -22,7 +35,7 @@ export default function PlayerInput3() {
           label="Name"
           fullWidth={true}
           variant="standard"
-          error={false}
+          error={errorForInput}
           margin="normal"
           onChange={handleInputChange}
         />
@@ -40,7 +53,7 @@ export default function PlayerInput3() {
           <ToggleButton color="error" size="large" value="no">No</ToggleButton>
         </ToggleButtonGroup>
         <div className='flex flex-col'>
-          <Button variant="contained" size="large">Submit</Button>
+          <Button variant="contained" size="large" onClick={handleSubmit}>Submit</Button>
         </div>
       </form>
     </div>
