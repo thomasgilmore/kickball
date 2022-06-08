@@ -1,10 +1,11 @@
-import React from 'react';
-import { Alert, Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
+import React, { useEffect } from 'react';
+import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
 
 export default function PlayerInput3() {
   const [inputValue, setInputValue] = React.useState('');
   const [errorForInput, setErrorForInput] = React.useState(false);
   const [alignment, setAlignment] = React.useState('');
+  const [submitButtonDisabled, setSubmitButtonDisabled] = React.useState(true);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -21,10 +22,15 @@ export default function PlayerInput3() {
       setErrorForInput(false);
     }
 
-    if (alignment !== '') {
-      
-    }
   }
+
+  useEffect(() => {
+    if (alignment !== '' && inputValue !== '') {
+      setSubmitButtonDisabled(false);
+    } else {
+      setSubmitButtonDisabled(true);
+    }
+  },[alignment, inputValue])
 
   return (
     <div className='flex my-20'>
@@ -53,7 +59,7 @@ export default function PlayerInput3() {
           <ToggleButton color="error" size="large" value="no">No</ToggleButton>
         </ToggleButtonGroup>
         <div className='flex flex-col'>
-          <Button variant="contained" size="large" onClick={handleSubmit}>Submit</Button>
+          <Button variant="contained" size="large" disabled={submitButtonDisabled} onClick={handleSubmit}>Submit</Button>
         </div>
       </form>
     </div>
