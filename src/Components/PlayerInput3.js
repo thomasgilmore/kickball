@@ -21,7 +21,6 @@ export default function PlayerInput3() {
     } else {
       setErrorForInput(false);
     }
-
   }
 
   useEffect(() => {
