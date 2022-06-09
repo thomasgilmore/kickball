@@ -4,6 +4,7 @@ const initialState = {
   inputValue: '',
   errorForInput: false,
   alignment: '',
+  submitButtonDisabled: true,
 };
 
 function reducer(state = initialState) {
