@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Alert, Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
+import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
 
 export default function PlayerInput3() {
   const [inputValue, setInputValue] = React.useState('');
