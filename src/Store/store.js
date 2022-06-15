@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+import { combineReducers } from 'redux';
 
 const initialState = {
   inputValue: '',
@@ -7,8 +7,27 @@ const initialState = {
   submitButtonDisabled: true,
 };
 
-function reducer(state = initialState) {
-  return state;
+export function updateInputValue(updatedInputValue) {
+  return {
+    type: 'UPDATE_INPUT_VALUE',
+    updatedInputValue
+  }
 }
 
-export const store = createStore(reducer);
+function kickball(state = initialState, action) {
+  switch (action.type) {
+    case 'UPDATE_INPUT_VALUE':
+      return {
+        ...state,
+        inputValue: action.updatedInputValue, 
+      }
+    default:
+      return state
+  }
+}
+
+const kickballApp = combineReducers({
+  kickball
+})
+
+export default kickballApp;
