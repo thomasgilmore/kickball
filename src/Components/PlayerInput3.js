@@ -36,8 +36,10 @@ export default function PlayerInput3() {
   useEffect(() => {
     if (alignment !== '' && inputValue !== '') {
       setSubmitButtonDisabled(false);
+      dispatch(updateSubmitButtonDisabled(false));
     } else {
       setSubmitButtonDisabled(true);
+      dispatch(updateSubmitButtonDisabled(true));
     }
   },[alignment, inputValue])
 
