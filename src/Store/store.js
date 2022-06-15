@@ -52,6 +52,11 @@ function kickball(state = initialState, action) {
         ...state,
         updatedAlignment: action.updatedAlignment,
       }
+    case 'UPDATE_SUBMIT_BUTTON_DISABLED':
+      return {
+        ...state,
+        updatedSubmitButtonDisabled: action.updatedSubmitButtonDisabled,
+      }
     default:
       return state
   }
