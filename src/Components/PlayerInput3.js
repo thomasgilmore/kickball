@@ -26,8 +26,10 @@ export default function PlayerInput3() {
   const handleSubmit = (event) => {
     if (inputValue === '') {
       setErrorForInput(true);
+      dispatch(updateErrorForInput(true));
     } else {
       setErrorForInput(false);
+      dispatch(updateErrorForInput(false));
     }
   }
 
