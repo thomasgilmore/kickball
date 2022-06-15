@@ -47,6 +47,11 @@ function kickball(state = initialState, action) {
         ...state,
         updatedErrorForInput: action.updatedErrorForInput,
       }
+    case 'UPDATE_ALIGNMENT':
+      return {
+        ...state,
+        updatedAlignment: action.updatedAlignment,
+      }
     default:
       return state
   }
