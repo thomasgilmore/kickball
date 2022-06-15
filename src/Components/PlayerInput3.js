@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react';
-import { store } from '../Store/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateInputValue } from '../Store/store';
 import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
 
 export default function PlayerInput3() {
+
+  const state = useSelector(state => state.kickball);
+  const dispatch = useDispatch();
+
   const [inputValue, setInputValue] = React.useState('');
   const [errorForInput, setErrorForInput] = React.useState(false);
   const [alignment, setAlignment] = React.useState('');
   const [submitButtonDisabled, setSubmitButtonDisabled] = React.useState(true);
-
-  store.getState()
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -23,6 +26,7 @@ export default function PlayerInput3() {
       setErrorForInput(true);
     } else {
       setErrorForInput(false);
+      dispatch(updateInputValue(inputValue));
     }
   }
 
@@ -34,7 +38,6 @@ export default function PlayerInput3() {
     }
   },[alignment, inputValue])
 
-  console.log(store.getState());
   return (
     <div className='flex my-20'>
       <form className="mx-auto">
