@@ -21,6 +21,20 @@ export function updateErrorForInput(updatedErrorForInput) {
   }
 }
 
+export function updateAlignment(updatedAlignment) {
+  return {
+    type: 'UPDATE_ALIGNMENT',
+    updatedAlignment
+  }
+}
+
+export function updateSubmitButtonDisabled(updatedSubmitButtonDisabled) {
+  return {
+    type: 'UPDATE_SUBMIT_BUTTON_DISABLED',
+    updatedSubmitButtonDisabled
+  }
+}
+
 function kickball(state = initialState, action) {
   switch (action.type) {
     case 'UPDATE_INPUT_VALUE':
