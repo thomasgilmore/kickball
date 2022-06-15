@@ -14,6 +14,13 @@ export function updateInputValue(updatedInputValue) {
   }
 }
 
+export function updateErrorForInput(updatedErrorForInput) {
+  return {
+    type: 'UPDATE_ERROR_FOR_INPUT',
+    updatedErrorForInput
+  }
+}
+
 function kickball(state = initialState, action) {
   switch (action.type) {
     case 'UPDATE_INPUT_VALUE':
