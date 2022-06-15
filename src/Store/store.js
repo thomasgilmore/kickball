@@ -42,6 +42,11 @@ function kickball(state = initialState, action) {
         ...state,
         inputValue: action.updatedInputValue, 
       }
+    case 'UPDATE_ERROR_FOR_INPUT':
+      return {
+        ...state,
+        updatedErrorForInput: action.updatedErrorForInput,
+      }
     default:
       return state
   }
