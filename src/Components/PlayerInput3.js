@@ -1,7 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateInputValue, updateErrorForInput, updateAlignment, updateSubmitButtonDisabled } from '../Store/store';
-import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
+import { 
+  updateInputValue, 
+  updateErrorForInput, 
+  updateAlignment, 
+  updateSubmitButtonDisabled 
+} from '../Store/store';
+import { 
+  Button, 
+  ToggleButton, 
+  ToggleButtonGroup, 
+  TextField, 
+  Typography 
+} from '@mui/material';
 
 export default function PlayerInput3() {
 
