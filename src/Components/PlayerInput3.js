@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateInputValue } from '../Store/store';
+import { updateInputValue, updateErrorForInput, updateAlignment, updateSubmitButtonDisabled } from '../Store/store';
 import { Button, ToggleButton, ToggleButtonGroup, TextField, Typography } from '@mui/material';
 
 export default function PlayerInput3() {
@@ -15,10 +15,12 @@ export default function PlayerInput3() {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
+    dispatch(updateInputValue(event.target.value));
   }
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
+    dispatch(updateAlignment(newAlignment));
   };
 
   const handleSubmit = (event) => {
@@ -26,7 +28,6 @@ export default function PlayerInput3() {
       setErrorForInput(true);
     } else {
       setErrorForInput(false);
-      dispatch(updateInputValue(inputValue));
     }
   }
 
